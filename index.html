@@ -4,46 +4,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cutie Frames - Personalised photo frames and beautiful gifts.">
-<title>Cutie Frames | Your Memories, Our Frames</title>
+<meta name="description" content="Cutie Frames - Personalised photo frames and gifts.">
+<title>Cutie Frames | Make Memories Special</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#fff8fb;color:#402b35}
-header{background:#fff;padding:16px 5%;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #0001}
-nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+body{
+font-family:Arial,sans-serif;
+background:#fff8fb;
+color:#402b35;
+}
+header{
+background:white;
+padding:16px 5%;
+position:sticky;
+top:0;
+z-index:10;
+box-shadow:0 2px 12px #0001;
+}
+nav{
+max-width:1150px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+}
 .logo{font-size:25px;font-weight:bold;color:#d94d83}
-nav a{color:#49313b;text-decoration:none;margin:5px;font-size:14px}
-.hero{background:linear-gradient(120deg,#ffe0ec,#fff5f8);padding:75px 7%;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+nav a{
+color:#49313b;
+text-decoration:none;
+margin:6px;
+font-size:14px;
+}
+.hero{
+background:linear-gradient(120deg,#ffe0ec,#fff5f8);
+padding:75px 7%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+flex-wrap:wrap;
+}
 .hero-text{max-width:520px}
-.hero h1{font-size:clamp(38px,6vw,60px);line-height:1.1;color:#a63b68;margin-bottom:20px}
+.hero h1{
+font-size:clamp(38px,6vw,60px);
+line-height:1.1;
+color:#a63b68;
+margin-bottom:20px;
+}
 .hero p{font-size:17px;line-height:1.7;margin-bottom:25px}
-.hero img{width:min(100%,430px);height:320px;object-fit:cover;border-radius:22px}
-.btn{background:#d94d83;color:white;padding:13px 23px;border:0;border-radius:30px;text-decoration:none;display:inline-block;cursor:pointer;font-weight:bold}
+.hero img{
+width:min(100%,430px);
+height:320px;
+object-fit:cover;
+border-radius:22px;
+}
+.btn{
+background:#d94d83;
+color:white;
+padding:14px 23px;
+border:0;
+border-radius:30px;
+text-decoration:none;
+display:inline-block;
+cursor:pointer;
+font-weight:bold;
+}
 section{padding:60px 7%}
-.heading{text-align:center;color:#a63b68;margin-bottom:32px}
+.heading{
+text-align:center;
+color:#a63b68;
+margin-bottom:32px;
+}
 .heading h2{font-size:32px;margin-bottom:10px}
 .heading p{color:#806873}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:23px;max-width:1150px;margin:auto}
-.product{background:white;border-radius:17px;overflow:hidden;box-shadow:0 4px 18px #0001}
-.product img{width:100%;height:230px;object-fit:cover}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:23px;
+max-width:1150px;
+margin:auto;
+}
+.product{
+background:white;
+border-radius:17px;
+overflow:hidden;
+box-shadow:0 4px 18px #0001;
+}
+.product img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
 .product-info{padding:20px}
 .product-info p{color:#806873;margin:12px 0}
 .product-info button{width:100%}
-.upload-area{max-width:650px;margin:auto;background:white;padding:28px;border-radius:18px;text-align:center;box-shadow:0 4px 20px #0001}
-.upload-area input{margin:20px auto;max-width:100%}
-#preview{display:none;max-width:100%;max-height:300px;margin:15px auto;border-radius:12px}
+.upload-area{
+max-width:650px;
+margin:auto;
+background:white;
+padding:28px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 4px 20px #0001;
+}
+.upload-area input[type=file]{margin:20px auto;max-width:100%}
+#preview{
+display:none;
+max-width:100%;
+max-height:300px;
+margin:15px auto;
+border-radius:12px;
+}
 #photoName{color:#a63b68;margin:12px}
-.about{background:#fff0f5;text-align:center}
-.about p{max-width:750px;margin:auto;line-height:1.8;color:#765866}
+.order-message{
+background:#fff0f5;
+padding:20px;
+border-radius:15px;
+margin:20px 0;
+text-align:center;
+}
+.order-message h3{color:#d94d83;margin-bottom:12px}
+.order-message p{line-height:1.6;margin:8px 0}
+#orderForm{
+display:none;
+margin-top:25px;
+text-align:left;
+background:#fff8fb;
+padding:20px;
+border-radius:14px;
+}
+#orderForm h3{
+color:#a63b68;
+margin-bottom:15px;
+}
+#orderForm input,
+#orderForm textarea{
+width:100%;
+padding:14px;
+margin:9px 0;
+border:1px solid #e7c5d4;
+border-radius:9px;
+font-size:15px;
+font-family:Arial;
+}
+#orderForm textarea{min-height:100px;resize:vertical}
+.about{
+background:#fff0f5;
+text-align:center;
+}
+.about p{
+max-width:750px;
+margin:auto;
+line-height:1.8;
+color:#765866;
+}
 .contact{text-align:center}
-footer{background:#402b35;color:white;text-align:center;padding:25px}
-.whatsapp{position:fixed;bottom:20px;right:15px;z-index:20;background:#25D366;color:white;padding:15px 20px;border-radius:35px;text-decoration:none;font-weight:bold;box-shadow:0 4px 15px #0003}
+footer{
+background:#402b35;
+color:white;
+text-align:center;
+padding:25px;
+}
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:15px;
+z-index:20;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:35px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 15px #0003;
+}
 @media(max-width:650px){
 nav{justify-content:center}
 nav div:last-child{text-align:center}
-.hero{text-align:center;justify-content:center;padding:55px 6%}
+.hero{
+text-align:center;
+justify-content:center;
+padding:55px 6%;
+}
 .hero img{height:250px}
 section{padding:50px 6%}
 }
@@ -70,13 +216,20 @@ section{padding:50px 6%}
 <section class="hero" id="home">
 <div class="hero-text">
 <h1>Your Memories, Our Frames ♡</h1>
-<p>Turn your favourite moments into beautiful memories. Create personalised photo frames and surprise the people you love.</p>
+<p>
+Turn your favourite moments into beautiful memories.
+Create personalised photo frames and surprise the people you love.
+</p>
 <a href="#collections" class="btn">Explore Collection</a>
 </div>
-<img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=900" alt="Beautiful photo frames">
+
+<img
+src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=900"
+alt="Beautiful photo frames">
 </section>
 
 <section id="collections">
+
 <div class="heading">
 <h2>Our Collections</h2>
 <p>Choose a beautiful frame for your special memories</p>
@@ -115,31 +268,86 @@ section{padding:50px 6%}
 </section>
 
 <section id="upload">
+
 <div class="heading">
 <h2>Create Your Custom Frame</h2>
 <p>Select your frame and upload your favourite photo</p>
 </div>
 
 <div class="upload-area">
+
 <h3 id="frameName">Selected Frame: None</h3>
 
-<input type="file" id="photoInput" accept="image/png,image/jpeg,image/webp">
+<input
+type="file"
+id="photoInput"
+accept="image/jpeg,image/png,image/webp">
 
 <img id="preview" alt="Your selected photo preview">
 
 <p id="photoName">No photo selected</p>
 
-<button class="btn" onclick="sendOrder()">Order on WhatsApp</button>
-
-<p style="font-size:12px;color:#806873;margin-top:15px">
-Your photo preview stays on your device. Attach the photo manually in WhatsApp when placing your order.
+<div class="order-message">
+<h3>♡ Make Your Memories Special!</h3>
+<p>
+Your favourite memories deserve something beautiful.
+Are you ready to place your order?
 </p>
+<p><b>Confirm your order to continue.</b></p>
+</div>
+
+<button class="btn" onclick="showOrderForm()">
+Confirm My Order
+</button>
+
+<div id="orderForm">
+
+<h3>Complete Your Order ♡</h3>
+
+<input
+type="text"
+id="customerName"
+placeholder="Your Full Name"
+maxlength="80">
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Your 10 Digit Mobile Number"
+maxlength="10">
+
+<textarea
+id="customerAddress"
+placeholder="Your Full Delivery Address"
+maxlength="500"></textarea>
+
+<button class="btn" onclick="submitOrder()">
+Send Order on WhatsApp
+</button>
+
+<p style="font-size:12px;color:#806873;margin-top:12px">
+Please check your details before sending your order.
+</p>
+
+</div>
+
+<p style="font-size:12px;color:#806873;margin-top:18px">
+Your photo preview stays on your device.
+You will need to attach the photo manually in WhatsApp.
+</p>
+
 </div>
 </section>
 
 <section class="about" id="about">
-<div class="heading"><h2>About Cutie Frames</h2></div>
-<p>At Cutie Frames, we believe every picture tells a beautiful story. Our goal is to turn your favourite moments into personalised photo frames and memorable gifts.</p>
+<div class="heading">
+<h2>About Cutie Frames</h2>
+</div>
+<p>
+At Cutie Frames, we believe every picture tells a beautiful story.
+Our goal is to turn your favourite moments into personalised
+photo frames and memorable gifts.
+</p>
 </section>
 
 <section class="contact" id="contact">
@@ -147,37 +355,50 @@ Your photo preview stays on your device. Attach the photo manually in WhatsApp w
 <h2>Contact Us</h2>
 <p>Have a question or want to place an order?</p>
 </div>
-<button class="btn" onclick="sendOrder()">Chat With Us</button>
+<button class="btn" onclick="contactWhatsApp()">Chat With Us</button>
 </section>
 
 </main>
 
 <footer>
 <p>♡ Cutie Frames | Make Every Memory Special</p>
-<p style="margin-top:8px">© <span id="year"></span> Cutie Frames. All Rights Reserved.</p>
+<p style="margin-top:8px">
+© <span id="year"></span> Cutie Frames. All Rights Reserved.
+</p>
 </footer>
 
-<a class="whatsapp" href="#" onclick="sendOrder();return false;">WhatsApp Order 💬</a>
+<a class="whatsapp" href="#" onclick="contactWhatsApp();return false;">
+WhatsApp 💬
+</a>
 
 <script>
 
-// CUTIE FRAMES WHATSAPP NUMBER
+// CUTIE FRAMES BUSINESS WHATSAPP NUMBER
 const WHATSAPP_NUMBER = "918303168948";
 
 let selectedFrame = "Not selected";
 let photoSelected = false;
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
 function chooseFrame(name){
+
 selectedFrame = name;
-document.getElementById("frameName").textContent = "Selected Frame: " + name;
-document.getElementById("upload").scrollIntoView({behavior:"smooth"});
+
+document.getElementById("frameName").textContent =
+"Selected Frame: " + name;
+
+document.getElementById("upload").scrollIntoView({
+behavior:"smooth"
+});
+
 }
 
 document.getElementById("photoInput").addEventListener("change",function(){
 
 const file = this.files[0];
+
 if(!file)return;
 
 if(file.size > 10*1024*1024){
@@ -195,29 +416,83 @@ return;
 const reader = new FileReader();
 
 reader.onload = function(e){
+
 document.getElementById("preview").src = e.target.result;
+
 document.getElementById("preview").style.display = "block";
+
 document.getElementById("photoName").textContent = file.name;
+
 photoSelected = true;
+
 };
 
 reader.readAsDataURL(file);
+
 });
 
-function sendOrder(){
+function showOrderForm(){
+
+document.getElementById("orderForm").style.display = "block";
+
+document.getElementById("orderForm").scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+function submitOrder(){
+
+const name =
+document.getElementById("customerName").value.trim();
+
+const phone =
+document.getElementById("customerPhone").value.trim();
+
+const address =
+document.getElementById("customerAddress").value.trim();
+
+if(!name || !phone || !address){
+alert("Please fill in all your details.");
+return;
+}
+
+if(!/^[0-9]{10}$/.test(phone)){
+alert("Please enter a valid 10-digit mobile number.");
+return;
+}
 
 const message =
-"Hello Cutie Frames! I want to place an order." +
+"NEW CUTIE FRAMES ORDER" +
+"\n----------------------" +
+"\nCustomer Name: " + name +
+"\nCustomer Mobile: " + phone +
+"\nDelivery Address: " + address +
 "\nSelected Frame: " + selectedFrame +
-"\nPhoto Selected: " + (photoSelected ? "Yes, I will attach it." : "Not yet.");
+"\nPhoto Selected: " + (photoSelected ? "Yes - customer will attach manually" : "No");
 
-const url = "https://wa.me/" + WHATSAPP_NUMBER +
+const url =
+"https://wa.me/" + WHATSAPP_NUMBER +
 "?text=" + encodeURIComponent(message);
 
 window.open(url,"_blank");
 
 }
 
+function contactWhatsApp(){
+
+const message = "Hello Cutie Frames! I have an enquiry.";
+
+window.open(
+"https://wa.me/" + WHATSAPP_NUMBER +
+"?text=" + encodeURIComponent(message),
+"_blank"
+);
+
+}
+
 </script>
+
 </body>
 </html>
